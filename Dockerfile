@@ -1,6 +1,7 @@
 FROM alpine:latest
     # The provider is aws in provider.tf file
-    # For multiple regions you can do TF_VAR_region='[us-east-1,us-east-2]' 
+    # For multiple regions you can do TF_VAR_region='[us-east-1,us-east-2]'
+    # If you are using list of regions then you should change the variable in provider.tf into type=list(string)
     # Installing and making cashed aws terraform plugin in one place.
 ENV TF_PLUGIN_CACHE_DIR="/.terraform.d/plugin-cache" \
     TF_VAR_region=us-west-1
